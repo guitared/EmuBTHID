@@ -6,8 +6,6 @@ This tool emulates a simple bluetooth HID device (keyboard + mouse) based on blu
 
 Via bluez, EmuBTHID registers a special bluetooth service ("00001124-0000-1000-8000-00805f9b34fb") which can serve as a HID device and be discoverable by other users.
 
-Via Xlib, EmuBTHID creates a X window, which grabs keyboard/mouse input and send them to remote.
-
 This tool requires "root" to listen to priviledged bluetooth ports, which communicate with remote devices.
 
 ## Dependencies

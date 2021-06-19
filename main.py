@@ -225,11 +225,11 @@ class Window(object):
 if __name__ == '__main__':
     DBusGMainLoop(set_as_default=True)
     service_record = open("sdp_record_kbd.xml").read()
-    d = display.Display()
-    d.change_keyboard_control(auto_repeat_mode=X.AutoRepeatModeOff)
+    # d = display.Display()
+    # d.change_keyboard_control(auto_repeat_mode=X.AutoRepeatModeOff)
     try:
         bthid_srv = BluetoothHIDService(service_record, CONTROLLER_MAC)
-        Window(d).loop(bthid_srv.send)
+        #Window(d).loop(bthid_srv.send)
         #Window(d).loop(print)
     finally:
         d.change_keyboard_control(auto_repeat_mode=X.AutoRepeatModeOn)
